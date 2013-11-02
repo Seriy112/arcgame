@@ -97,10 +97,6 @@ public class Game extends JFrame {
 				System.exit(1);
 			}
 
-/*
-			xcor += xvilositi;
-			ycor += yvilositi;
-	*/
 			Game.this.repaint();
 
 			if (blocks.isEmpty()) {
@@ -114,11 +110,7 @@ public class Game extends JFrame {
 				}
 				System.exit(1);
 			}
-			
-		
-			 
-	
-			
+						
 			long endTime = System.currentTimeMillis();
 			long deltaTime = endTime - startTime;
 			if (deltaTime < 10) {
