@@ -37,7 +37,7 @@ public class Game extends JFrame {
 			//	g.fillRect(carretPositionX, 450, 100, 25);
 				
 				carret.draw(g);
-				//carret.carretPosition();
+				
 				ball.tick();
 				ball.checkCollision(blocks, carret);
 				
