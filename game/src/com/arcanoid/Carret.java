@@ -6,19 +6,22 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class Carret extends KeyAdapter {
-	
+
 	private int carretPositionX;
+	private int carretWidth;
+	private int carretHeight;
 
 	public Carret(int carretPositionX) {
 		this.carretPositionX = carretPositionX;
+		this.carretWidth = 100;
 	}
 
 	public void draw(Graphics g) {
 		g.setColor(Color.BLUE);
-		g.fillRect(carretPositionX, 450, 100, 25);
+		g.fillRect(carretPositionX, 450, carretWidth, 25);
 
 	}
-	
+
 	public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_RIGHT:
@@ -36,6 +39,14 @@ public class Carret extends KeyAdapter {
 
 			break;
 		}
+	}
+
+	public int getCarretPositionX() {
+		return carretPositionX;
+	}
+
+	public int getcarretWidth() {
+		return carretWidth;
 	}
 
 }

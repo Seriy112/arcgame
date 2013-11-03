@@ -51,7 +51,7 @@ public class Game extends JFrame {
 				carret.draw(g);
 				//carret.carretPosition();
 				ball.tick();
-				ball.checkCollision(blocks);
+				ball.checkCollision(blocks, carret);
 				
 				for (Block block : blocks) {
 					block.draw(g);
@@ -73,30 +73,7 @@ public class Game extends JFrame {
 	private void gameCycle() {
 		while (true) {
 			long startTime = System.currentTimeMillis();
-			
-			if (xcor + 10 < 0 || xcor + 10 > 630) {
-				xvilositi = -xvilositi;
-			}
-			if (ycor + 10 < 20) {
-				yvilositi = -yvilositi;
-			}
-			if (xcor + 10 > carretPositionX
-					&& xcor + 10 < carretPositionX + 100 && ycor == 430) {
-				yvilositi = -yvilositi;
-			}
-
-			if (ycor > 450) {
-				System.out.println("Game over");
-
-				try {
-					TimeUnit.SECONDS.sleep(3);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				System.exit(1);
-			}
-
+	
 			Game.this.repaint();
 
 			if (blocks.isEmpty()) {
