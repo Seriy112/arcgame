@@ -2,13 +2,8 @@ package com.arcanoid;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 import javax.swing.JPanel;
-import javax.swing.Timer;
 import javax.swing.JFrame;
 
 import java.util.LinkedList;
@@ -17,13 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Game extends JFrame {
 
-	private int carretPositionX = 0, a = 20, b = 0, schet = 0;
-
-	
-
-	private int xcor = 200, ycor = 200, xvilositi = -1, yvilositi = 1;
-
-	private Timer timer;
 	private JPanel panel;
 	private List<Block> blocks;
 	private Ball ball;
