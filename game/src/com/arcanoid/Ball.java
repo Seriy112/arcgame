@@ -30,12 +30,12 @@ public class Ball {
 		Iterator<Block> blockIterator = blocks.iterator();
 		while (blockIterator.hasNext()) {
 			Block block = blockIterator.next();
-			if (xPosition > block.getXPosition()
-					&& xPosition < (block.getXPosition() + block.getWidth())) {
-				if (yPosition > block.getYPosition()
-						&& yPosition < (block.getYPosition() + block
+			if (xPosition >= block.getXPosition()
+					&& xPosition <= (block.getXPosition() + block.getWidth())) {
+				if (yPosition >= block.getYPosition()
+						&& yPosition <= (block.getYPosition() + block
 								.getHeight())) {
-					if (xPosition == block.getXPosition() - block.getWidth()
+					if (xPosition == block.getXPosition() + block.getWidth()
 							|| xPosition == block.getXPosition()) {
 						xVelocity *= -1;
 					} else {
@@ -47,19 +47,19 @@ public class Ball {
 
 		}
 
-		if (xPosition> carret.getCarretPositionX()
-				&& xPosition< carret.getCarretPositionX()
-						+ carret.getcarretWidth() && yPosition-radius == 430) {
+		if (xPosition > carret.getCarretPositionX()
+				&& xPosition < carret.getCarretPositionX()
+						+ carret.getcarretWidth() && yPosition - radius == 430) {
 			yVelocity *= -1;
 		}
 
-		if (xPosition-radius< 0 || xPosition > 630) {
+		if (xPosition - radius < 0 || xPosition > 630) {
 			xVelocity *= -1;
 		}
 		if (yPosition < 20) {
 			yVelocity *= -1;
 		}
-		
+
 		if (yPosition > 450) {
 			System.out.println("Game over");
 
@@ -71,7 +71,6 @@ public class Ball {
 			}
 			System.exit(1);
 		}
-
 
 	}
 
