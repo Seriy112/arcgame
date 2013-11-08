@@ -34,7 +34,7 @@ public class Game extends JFrame {
 				g.setColor(Color.BLACK);
 				g.fillRect(0, 0, 640, 500);
 				g.setColor(Color.BLUE);
-			//	g.fillRect(carretPositionX, 450, 100, 25);
+			
 				
 				carret.draw(g);
 				
@@ -109,3 +109,7 @@ public class Game extends JFrame {
 	}
 
 }
+
+
+
+
