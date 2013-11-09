@@ -16,6 +16,7 @@ public class Game extends JFrame {
 	private List<Block> blocks;
 	private Ball ball;
 	private Carret carret;
+	private Levels levels;
 	private int width=70;
 	private int height=30;
 	public static void main(String[] args) {
@@ -67,14 +68,13 @@ public class Game extends JFrame {
 
 			if (blocks.isEmpty()) {
 				System.out.println("You WIN");
-
 				try {
-					TimeUnit.SECONDS.sleep(2);
+					TimeUnit.SECONDS.sleep(3);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.exit(1);
+			levels = new Levels(3, 3);
 			}
 						
 			long endTime = System.currentTimeMillis();
@@ -93,8 +93,8 @@ public class Game extends JFrame {
 	private void prepare() {
 		blocks = new LinkedList<Block>();
 		int y = 20, x = 0;
-		for (int i = 0; i < 5; i++) {
-			for (int z = 0; z < 8; z++) {
+		for (int i = 0; i < 1; i++) {
+			for (int z = 0; z < 1; z++) {
 				blocks.add(new Block(x, y, width, height));
 				x += width+5;
 			}
