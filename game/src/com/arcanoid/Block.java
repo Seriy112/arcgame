@@ -18,7 +18,11 @@ public class Block {
 	}
 	
 	public void draw(Graphics g) {
-		g.setColor(Color.BLUE);
+		int h,s,b;
+		h=(int)(1 + Math.random() * 255);
+		s=(int)(1 + Math.random() * 255);
+		b=(int)(1 + Math.random() * 255);
+		g.setColor(Color.getHSBColor(h, s, b));
 		g.fillRect(xPosition, yPosition, width, height);
 	}
 

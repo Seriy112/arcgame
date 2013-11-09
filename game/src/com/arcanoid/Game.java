@@ -16,7 +16,8 @@ public class Game extends JFrame {
 	private List<Block> blocks;
 	private Ball ball;
 	private Carret carret;
-
+	private int width=70;
+	private int height=30;
 	public static void main(String[] args) {
 		Game game = new Game();
 		game.setVisible(true);
@@ -91,20 +92,23 @@ public class Game extends JFrame {
 	
 	private void prepare() {
 		blocks = new LinkedList<Block>();
-		int y = 20, j = 0;
-		for (int i = 0; i < 3; i++) {
-			for (int z = 0; z < 6; z++) {
-				blocks.add(new Block(j, y, 100, 50));
-				j += 105;
+		int y = 20, x = 0;
+		for (int i = 0; i < 5; i++) {
+			for (int z = 0; z < 8; z++) {
+				blocks.add(new Block(x, y, width, height));
+				x += width+5;
 			}
-			y += 55;
-			j = 0;
+			y += height+5;
+			x = 0;
 		}
+		
+		
 		
 		ball = new Ball(200, 200, 10);
 		carret = new Carret(0);
 		
 		addKeyListener(carret);
+		
 		
 	}
 
