@@ -41,11 +41,11 @@ public class Carret extends KeyAdapter {
 		}
 	}
 
-	public int getCarretPositionX() {
+	public int getPositionX() {
 		return carretPositionX;
 	}
 
-	public int getcarretWidth() {
+	public int getWidth() {
 		return carretWidth;
 	}
 

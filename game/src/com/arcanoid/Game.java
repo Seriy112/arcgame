@@ -74,7 +74,7 @@ public class Game extends JFrame {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			levels = new Levels(3, 3);
+			
 			}
 						
 			long endTime = System.currentTimeMillis();
@@ -91,7 +91,9 @@ public class Game extends JFrame {
 	}
 	
 	private void prepare() {
-		blocks = new LinkedList<Block>();
+		
+	
+	/*	blocks = new LinkedList<Block>();
 		int y = 20, x = 0;
 		for (int i = 0; i < 1; i++) {
 			for (int z = 0; z < 1; z++) {
@@ -106,9 +108,9 @@ public class Game extends JFrame {
 		
 		ball = new Ball(200, 200, 10);
 		carret = new Carret(0);
-		
+		*/
 		addKeyListener(carret);
-		
+		addKeyListener(l);
 		
 	}
 

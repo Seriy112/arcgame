@@ -6,24 +6,27 @@ import java.util.List;
 public class Levels {
 	private int xPosition;
 	private int yPosition;
+	private int width;
+	private int height;
 	private int nBlockWidth;
 	private int nBlockHeight;
 	private List<Block> blocks;
 	private Ball ball;
 	private Carret carret;
 
-	public Levels(int nBlockWidth, int nBlockHeight) {
-		this.xPosition=xPosition;
-		this.yPosition=yPosition;
+	public Levels(int xPosition, int yPosition, int width, int height,
+			int nBlockWidth, int nBlockHeight) {
+		this.width = width;
+		this.height = height;
+		this.width = width;
+		this.height = height;
 		this.nBlockWidth = nBlockWidth;
 		this.nBlockHeight = nBlockHeight;
 	}
 
 	public void level2() {
 		blocks = new LinkedList<Block>();
-		int width = 70;
-		int height = 30;
-		
+
 		for (int i = 0; i < nBlockHeight; i++) {
 			for (int z = 0; z < nBlockWidth; z++) {
 				blocks.add(new Block(xPosition, yPosition, width, height));
@@ -38,7 +41,6 @@ public class Levels {
 
 	}
 
-	
 	public int getXPosition() {
 		return xPosition;
 	}
@@ -47,11 +49,11 @@ public class Levels {
 		return yPosition;
 	}
 
-/*	public int getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
 	public int getHeight() {
 		return height;
-	}	*/
+	}
 }
