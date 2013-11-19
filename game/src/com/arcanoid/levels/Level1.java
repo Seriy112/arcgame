@@ -8,7 +8,7 @@ import com.arcanoid.Block;
 import com.arcanoid.Carret;
 import com.arcanoid.Status;
 
-public class Level1 extends BaseLevel {
+public abstract class Level1 extends BaseLevel {
 	
 	private final static int BLOCK_HEIGHT = 30;
 	private final static int BLOCK_WIGTH = 70;
@@ -34,13 +34,12 @@ public class Level1 extends BaseLevel {
 			yPosition += BLOCK_HEIGHT + SPACE;
 			xPosition = startXPositson;
 		}
-	}
-
-	@Override
-	public Status processLevel() {
-		return Status.NONE;
+		ball = new Ball(200, 200, 10);
+		carret = new Carret(0);
 		
 	}
+
+
 	
 	
 

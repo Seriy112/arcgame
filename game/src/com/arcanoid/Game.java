@@ -6,6 +6,8 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 
+import com.arcanoid.levels.ILevel;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -14,9 +16,6 @@ public class Game extends JFrame {
 
 	private JPanel panel;
 	private List<Block> blocks;
-	private Ball ball;
-	private Carret carret;
-	private Levels levels;
 	private int width=70;
 	private int height=30;
 	public static void main(String[] args) {
@@ -109,8 +108,10 @@ public class Game extends JFrame {
 		ball = new Ball(200, 200, 10);
 		carret = new Carret(0);
 		*/
+		
+		
 		addKeyListener(carret);
-		addKeyListener(l);
+	
 		
 	}
 

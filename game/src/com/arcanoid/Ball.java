@@ -2,11 +2,14 @@ package com.arcanoid;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Ball {
+import com.arcanoid.levels.ILevel;
+
+public class Ball implements ILevel{
 	private int xPosition;
 	private int yPosition;
 	private int radius;
@@ -34,30 +37,48 @@ public class Ball {
 		yPosition += yVelocity;
 	}
 	
-	public int getxVelocity(){
-		return xVelocity;
-	}
-	public int getyVelocity(){
-		return yVelocity;
-	}
-	public int setxVelocity(){
-		return xVelocity;
-	}
-	public int setyVelocity(){
-		return yVelocity;
-		}
-	public int getxPosition(){
-		return xPosition;
-	}
-	public int getyPosition(){
-		return yPosition;
-	}
-	
 	public void invertXVelocity() {
 		xVelocity *= -1;
 	}
+	
+	public void invertYVelocity() {
+		yVelocity *= -1;
+	}
+	
+	public int getXPosition(){
+		return xPosition;
+	}
+	public int getYPosition(){
+		return yPosition;
+	}
+	
+
 	public int getRadius(){
 		return radius;
+	}
+
+	@Override
+	public Status processLevel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getWidth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getHeight() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 

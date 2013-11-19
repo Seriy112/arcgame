@@ -5,7 +5,9 @@ import java.awt.Graphics;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class Carret extends KeyAdapter {
+import com.arcanoid.levels.ILevel;
+
+public class Carret extends KeyAdapter implements ILevel {
 
 	private int carretPositionX;
 	private int carretWidth;
@@ -41,12 +43,56 @@ public class Carret extends KeyAdapter {
 		}
 	}
 
-	public int getPositionX() {
+	public int getXPosition() {
 		return carretPositionX;
 	}
 
 	public int getWidth() {
 		return carretWidth;
+	}
+
+	@Override
+	public Status processLevel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void tick() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void invertXVelocity() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void invertYVelocity() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public int getYPosition() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getRadius() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getHeight() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

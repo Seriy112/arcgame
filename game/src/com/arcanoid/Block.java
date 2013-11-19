@@ -2,8 +2,11 @@ package com.arcanoid;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 
-public class Block {
+import com.arcanoid.levels.ILevel;
+
+public class Block implements ILevel {
 	
 	private int xPosition;
 	private int yPosition;
@@ -40,6 +43,42 @@ public class Block {
 
 	public int getHeight() {
 		return height;
+	}
+
+	@Override
+	public Status processLevel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void tick() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void invertXVelocity() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void invertYVelocity() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getRadius() {
+		// TODO Auto-generated method stub
+		return 0;
 	}	
 	
 
